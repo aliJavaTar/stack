@@ -3,6 +3,9 @@ package kata.stak;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
@@ -61,4 +64,15 @@ public class StackTest {
         assertThat(stack.getSize()).isEqualTo(1);
     }
 
+    @Test
+    void When_value_is_pushed_value_is_popped() {
+        List<String> list = new LinkedList<>();
+        list.add("A");
+        list.add("B");
+        stack.push("A");
+        stack.push("B");
+        stack.push("C");
+        stack.pop();
+        assertThat(stack.getElements()).isEqualTo(list);
+    }
 }

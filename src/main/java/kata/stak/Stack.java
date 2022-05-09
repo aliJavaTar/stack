@@ -23,15 +23,19 @@ public class Stack {
         elements.add(element);
     }
 
+    public List<String> getElements() {
+        return elements;
+    }
+
     /*
-     A
-     B
-     C
-     D
-     E
-     */
+         A
+         B
+         C
+         D
+         E
+         */
     public void pop() {
-        if (getSize() == 0)
+        if (getSize() <= 0)
             throw new StackOverflowException("When popped passed limit, stack underflows");
         elements.remove(getSize() - 1);
     }
