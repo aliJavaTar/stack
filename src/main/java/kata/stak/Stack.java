@@ -26,7 +26,10 @@ public class Stack {
     public List<String> getElements() {
         return elements;
     }
-
+  public void ali()
+  {
+      System.out.println("ali");
+  }
     /*
          A
          B
